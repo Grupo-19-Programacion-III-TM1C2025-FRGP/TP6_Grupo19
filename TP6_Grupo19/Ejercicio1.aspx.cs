@@ -15,11 +15,21 @@ namespace TP6_Grupo19
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack) {
-                GestionProductos gestionProductos =new GestionProductos();
-               gvProductos.DataSource= gestionProductos.ObtenerTodosLosProductos();
-               gvProductos.DataBind();
-
+                CargarGridViewProductos();
             }
+        }
+
+        private void CargarGridViewProductos()
+        {
+            GestionProductos gestionProductos = new GestionProductos();
+            gvProductos.DataSource = gestionProductos.ObtenerTodosLosProductos();
+            gvProductos.DataBind();
+        }
+
+        protected void gvProductos_PageIndexChanging(Object sender, GridViewPageEventArgs e)
+        {
+            gvProductos.PageIndex = e.NewPageIndex;
+            CargarGridViewProductos();
         }
     }
 }
