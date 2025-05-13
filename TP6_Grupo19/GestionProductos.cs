@@ -58,7 +58,7 @@ namespace TP6_Grupo19
             SqlParametros = Comando.Parameters.Add("@NOMBREPRODUCTO", SqlDbType.NVarChar, 50);
             SqlParametros.Value = producto.NombreProducto;
 			
-            SqlParametros = Comando.Parameters.Add("@CANTIDADUNIDAD", SqlDbType.Int);
+            SqlParametros = Comando.Parameters.Add("@CANTIDADUNIDAD", SqlDbType.NVarChar, 20);
             SqlParametros.Value = producto.CantidadUnidad;
 			
             SqlParametros = Comando.Parameters.Add("@PRECIOUNIDAD", SqlDbType.Money);
