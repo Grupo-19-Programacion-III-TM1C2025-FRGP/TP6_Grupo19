@@ -35,6 +35,7 @@ namespace TP6_Grupo19.Clases
             return dataSet.Tables[nombreTabla];
         }
 
+
         public int EjecutarProcesamientoAlmacenado(SqlCommand comandoSQL, string nombreProcesamientoAlmacenado)
         {
 
@@ -50,7 +51,6 @@ namespace TP6_Grupo19.Clases
             conexion.Close();
             return FilasCambiadas; 
         }
-
 
     }
 }

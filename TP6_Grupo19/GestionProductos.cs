@@ -18,10 +18,36 @@ namespace TP6_Grupo19
 
         }
 
+
+        private void ArmarParametrosProductoEliminar(ref SqlCommand Comando, Producto producto)
+        {
+            SqlParameter SqlParametros = new SqlParameter();
+            SqlParametros = Comando.Parameters.Add("@IdProducto", SqlDbType.Int);
+            SqlParametros.Value = producto.IdProducto; 
+        }
+    
+        public bool EliminarProducto(Producto producto)
+        {
+            SqlCommand sqlCommand = new SqlCommand();
+            ArmarParametrosProductoEliminar(ref sqlCommand, producto);
+            Conexion conexion = new Conexion();
+            int FilasInsertadas = conexion.EjecutarProcesamientoAlmacenado(sqlCommand, "spEliminarProducto");
+            if (FilasInsertadas == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
 		public DataTable ObtenerTodosLosProductosEjercicio2()
 		{
 			return conexion.TraerTabla("SELECT IdProducto, NombreProducto, IdProveedor, PrecioUnidad FROM Productos", "Productos");
 		}
+
 
 		private void ArmarParametrosProductos(ref SqlCommand Comando, Producto producto)
 		{
@@ -56,7 +82,7 @@ namespace TP6_Grupo19
 			}
 
 		}
-		
+        
 	}
 
 }
