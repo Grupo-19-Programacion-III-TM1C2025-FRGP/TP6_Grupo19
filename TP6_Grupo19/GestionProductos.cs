@@ -18,6 +18,11 @@ namespace TP6_Grupo19
 
         }
 
+		public DataTable ObtenerTodosLosProductosEjercicio2()
+		{
+			return conexion.TraerTabla("SELECT IdProducto, NombreProducto, IdProveedor, PrecioUnidad FROM Productos", "Productos");
+		}
+
 		private void ArmarParametrosProductos(ref SqlCommand Comando, Producto producto)
 		{
 			SqlParameter SqlParametros = new SqlParameter();
