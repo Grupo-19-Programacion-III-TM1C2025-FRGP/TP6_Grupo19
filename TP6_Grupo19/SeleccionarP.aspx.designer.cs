@@ -11,7 +11,7 @@ namespace TP6_Grupo19
 {
 
 
-    public partial class Ejercicio2
+    public partial class SeleccionarP
     {
 
         /// <summary>
@@ -24,31 +24,13 @@ namespace TP6_Grupo19
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control lblInicio.
+        /// Control gvProductos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblInicio;
-
-        /// <summary>
-        /// Control hlSeleccionar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlSeleccionar;
-
-        /// <summary>
-        /// Control hpEliminar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hpEliminar;
+        protected global::System.Web.UI.WebControls.GridView gvProductos;
 
         /// <summary>
         /// Control hlVolver.
@@ -58,14 +40,5 @@ namespace TP6_Grupo19
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hlVolver;
-
-        /// <summary>
-        /// Control hlMostrar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlMostrar;
     }
 }
