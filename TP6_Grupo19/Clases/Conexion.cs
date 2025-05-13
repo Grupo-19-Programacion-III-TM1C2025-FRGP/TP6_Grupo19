@@ -34,6 +34,21 @@ namespace TP6_Grupo19.Clases
 
             return dataSet.Tables[nombreTabla];
         }
+        public int EjecutarProcedimientoAlmacenado(SqlCommand comandoSQL, string nombreProcedimientoAlmacenado)
+        {
+            int FilasCambiadas;
+            SqlConnection conexion = _sqlConnection;
+            conexion.Open();
+            SqlCommand sqlCommand = new SqlCommand();
+            sqlCommand = comandoSQL;
+            sqlCommand.Connection = conexion;
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+            sqlCommand.CommandText = nombreProcedimientoAlmacenado;
+            FilasCambiadas = sqlCommand.ExecuteNonQuery();
+            conexion.Close();
+            return FilasCambiadas;
+
+        }
     }
 }
     
