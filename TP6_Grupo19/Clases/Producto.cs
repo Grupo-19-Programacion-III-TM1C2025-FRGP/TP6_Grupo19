@@ -18,6 +18,11 @@ namespace TP6_Grupo19.Clases
 
         }
 
+        public Producto(int idProdcuto)
+        {
+            _idProducto = idProdcuto;
+        }
+
         public Producto(int idProdcuto, string nombreProducto, string cantidadUnidad, decimal precioUnidad)
         {
             _idProducto = idProdcuto;

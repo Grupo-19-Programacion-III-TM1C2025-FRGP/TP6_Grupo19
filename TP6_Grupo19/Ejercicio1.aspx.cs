@@ -34,17 +34,6 @@ namespace TP6_Grupo19
             gvProductos.PageIndex = e.NewPageIndex;
             CargarGridViewProductos();
         }
-
-        protected void gvProductos_RowDeleting(object sender, GridViewDeleteEventArgs e)
-        {
-            string idProducto = ((Label)gvProductos.Rows[e.RowIndex].FindControl("lbl_it_IdProducto")).Text;
-            Producto producto = new Producto(Convert.ToInt32(idProducto));
-            GestionProductos gestion = new GestionProductos();
-            gestion.EliminarProducto(producto);
-
-            CargarGridViewProductos();
-         }
-
         protected void gvProductos_RowEditing(Object sender, GridViewEditEventArgs e)
         {
             gvProductos.EditIndex = e.NewEditIndex;
@@ -72,6 +61,16 @@ namespace TP6_Grupo19
             gvProductos.EditIndex = -1;
             CargarGridViewProductos();
 
+        }
+
+        protected void gvProductos_RowDeleting1(object sender, GridViewDeleteEventArgs e)
+        {
+            string idProducto = ((Label)gvProductos.Rows[e.RowIndex].FindControl("lbl_it_IdProducto")).Text;
+            Producto producto = new Producto(Convert.ToInt32(idProducto));
+            GestionProductos gestion = new GestionProductos();
+            gestion.EliminarProducto(producto);
+
+            CargarGridViewProductos();
         }
     }
 }
