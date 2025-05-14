@@ -62,7 +62,7 @@
             <tr>
                 <td class="auto-style2">&nbsp;</td>
                 <td class="auto-style3">
-                    <asp:HyperLink ID="hlMostrar" runat="server">Mostrar Productos</asp:HyperLink>
+                    <asp:HyperLink ID="hlMostrar" runat="server" NavigateUrl="~/MostrarProductos.aspx">Mostrar Productos</asp:HyperLink>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
