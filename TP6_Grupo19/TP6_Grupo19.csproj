@@ -89,7 +89,7 @@
     <Compile Include="Ejercicio2.aspx.designer.cs">
       <DependentUpon>Ejercicio2.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GestionProductos.cs" />
+    <Compile Include="Clases\GestionProductos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
