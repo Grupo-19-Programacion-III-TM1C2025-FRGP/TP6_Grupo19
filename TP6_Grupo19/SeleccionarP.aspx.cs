@@ -32,5 +32,12 @@ namespace TP6_Grupo19
             gvProductos.PageIndex = e.NewPageIndex;
             CargarGridViewProductos();
         }
+
+        protected void gvProductos_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+            string nombreProducto = ((Label)gvProductos.Rows[e.NewSelectedIndex].FindControl("lbl_it_NombreProducto")).Text;
+
+            ProductoSeleccionado.Text = "Producto agregado: " + nombreProducto;
+        }
     }
 }
