@@ -13,5 +13,10 @@ namespace TP6_Grupo19
         {
 
         }
+
+        protected void lnkbtnEliminar_Click(object sender, EventArgs e)
+        {
+            Session["TablaProductos"] = null;
+        }
     }
 }
