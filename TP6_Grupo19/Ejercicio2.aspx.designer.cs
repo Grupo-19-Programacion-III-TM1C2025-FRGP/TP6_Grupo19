@@ -42,13 +42,13 @@ namespace TP6_Grupo19
         protected global::System.Web.UI.WebControls.HyperLink hlSeleccionar;
 
         /// <summary>
-        /// Control hpEliminar.
+        /// Control lnkbtnEliminar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hpEliminar;
+        protected global::System.Web.UI.WebControls.LinkButton lnkbtnEliminar;
 
         /// <summary>
         /// Control hlVolver.
