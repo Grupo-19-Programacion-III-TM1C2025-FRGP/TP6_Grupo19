@@ -31,7 +31,7 @@
             </tr>
             <tr>
                 <td>
-                        <asp:GridView ID="gvProductos" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" AllowPaging="True" style="margin-right: 0px" AutoGenerateSelectButton="True" PageSize="14" OnPageIndexChanging="gvProductos_PageIndexChanging1">
+                        <asp:GridView ID="gvProductos" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" AllowPaging="True" style="margin-right: 0px" AutoGenerateSelectButton="True" PageSize="14" OnPageIndexChanging="gvProductos_PageIndexChanging1" OnSelectedIndexChanging="gvProductos_SelectedIndexChanging">
                             <Columns>
                                 <asp:TemplateField HeaderText="Id Producto">
                                     <EditItemTemplate>
@@ -95,7 +95,7 @@
             </tr>
             <tr>
                 <td class="auto-style2">
-                    <asp:HyperLink ID="hlVolver" runat="server" NavigateUrl="~/Ejercicio2.aspx">Volver</asp:HyperLink>
+                    <asp:Label ID="ProductoSeleccionado" runat="server"></asp:Label>
                 </td>
                 <td class="auto-style2"></td>
                 <td class="auto-style2"></td>
@@ -114,7 +114,9 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:HyperLink ID="hlVolver" runat="server" NavigateUrl="~/Ejercicio2.aspx">Volver</asp:HyperLink>
+                </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
