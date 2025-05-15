@@ -50,15 +50,23 @@ namespace TP6_Grupo19
 
         private void ActualizarDTSession(dynamic obj)
         {
-
             if (Session["TablaProductos"] == null)
             {
                 Session["TablaProductos"] = CrearDataTable();
             }
 
-            AgregarFilaDT((DataTable)Session["TablaProductos"], obj);
+            DataTable dt = (DataTable)Session["TablaProductos"];
 
+            int idProductoNuevo = Convert.ToInt32(obj.idProducto);
+            bool yaExiste = dt.AsEnumerable().Any(row => row.Field<int>("IdProducto") == idProductoNuevo);
+
+            if (!yaExiste)
+            {
+                AgregarFilaDT(dt, obj);
+            }
         }
+
+
 
         private DataTable CrearDataTable()
         {
