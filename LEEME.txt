@@ -1,0 +1,30 @@
+Estos son los procedimientos almacenados que usamos para la ejecución del codigo.
+
+1-----------
+
+CREATE PROCEDURE spEliminarProducto
+(
+@IDPRODUCTO INT
+)
+AS
+DELETE FROM PRODUCTOS 
+WHERE IDPRODUCTO=@IDPRODUCTO
+RETURN
+
+2----------
+
+CREATE PROCEDURE [dbo].[spActualizarProducto]
+(
+@IDPRODUCTO INT,
+@NOMBREPRODUCTO NVARCHAR(50),
+@CANTIDADUNIDAD NVARCHAR(20),
+@PRECIOUNIDAD MONEY
+)
+AS
+UPDATE Productos
+SET
+NombreProducto=@NOMBREPRODUCTO,
+CantidadPorUnidad=@CANTIDADUNIDAD,
+PrecioUnidad=@PRECIOUNIDAD
+WHERE IdProducto=@IDPRODUCTO
+RETURN
