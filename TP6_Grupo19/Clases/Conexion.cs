@@ -10,7 +10,7 @@ namespace TP6_Grupo19.Clases
 {
     public class Conexion
     {
-        private string _cadenaConexion = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Neptuno;Integrated Security=True";
+        private string _cadenaConexion = "Data Source=localhost\\sqlexpress; Initial\r\nCatalog=Neptuno; Integrated Security=True";
         private readonly SqlConnection _sqlConnection;
         // private string _consultaSQL;
 
